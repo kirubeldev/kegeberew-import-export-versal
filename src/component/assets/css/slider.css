@@ -1,0 +1,20 @@
+.slider-item {
+    position: relative;
+  }
+  
+  .slider-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Adjust left positioning as needed */
+    transform: translateY(-50%);
+    color: white; /* Text color */
+    font-size: 24px; /* Text font size */
+    font-weight: bold; /* Text font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+  }
+  

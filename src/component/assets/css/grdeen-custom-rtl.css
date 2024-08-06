@@ -1,0 +1,75 @@
+body {
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.owl-carousel {
+  direction: ltr;
+}
+
+.owl-carousel .owl-nav,
+.owl-carousel .owl-dots,
+.owl-carousel .owl-item {
+  direction: rtl;
+}
+
+.bootstrap-select .dropdown-menu,
+.bootstrap-select .dropdown-toggle .filter-option {
+  text-align: right;
+}
+.item {
+  margin-right: 20px; /* Adjust the value as per your preference */
+}
+/* CSS for arrow icons */
+.icon-left-arrow,
+.icon-right-arrow {
+  color: #000; /* Set the color */
+  font-size: 24px; /* Set the font size */
+  cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+/* Hover styles for arrows */
+.icon-left-arrow:hover,
+.icon-right-arrow:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
+
+.item:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Assuming you're displaying 3 items at once */
+  gap: 20px; /* Adjust the value as per your preference */
+}
+
+.list-unstyled {
+  padding-right: 0;
+}
+
+.main-slider-one__carousel.owl-carousel .owl-nav {
+  left: auto;
+}
+
+.main-header__wellcome::after,
+.main-header--only-one .main-header__right::before {
+  transform: scaleX(-1);
+}
+
+.main-menu .main-menu__list li ul li > a::after {
+  content: "\f0d9";
+}
+
+.work-process-one__col:hover .work-process-one__col__shapebg {
+  transform: translate(15%, 15%);
+}
+
+.free-booking-one__image {
+  transform: scaleX(-1);
+}
+
+.free-booking-one__image__maskingimg {
+  margin-right: 0;
+}
+/*# sourceMappingURL=grdeen-custom-rtl.css.map */
