@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import as from "./assets/picFi/about.jpg";
+
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
     "./assets/picFi/about.jpg",
-    "./assets/picFi/cargo.jpg", "./assets/picFi/how.jpg",
+    "./assets/picFi/cargo.jpg",
+     "./assets/picFi/twoo.jpg",
 
   ];
 
