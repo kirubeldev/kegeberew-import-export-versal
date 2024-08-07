@@ -75,7 +75,7 @@ const Home = () => {
                         >
                           <div
                             className="blog-slider__title"
-                            style={{ display: "flex" }}
+                            style={{ display: "flex"  ,marginTop:"10px"}}
                           >
                             CEO Message
                           </div>
