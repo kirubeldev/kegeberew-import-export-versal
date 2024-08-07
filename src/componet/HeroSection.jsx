@@ -1,193 +1,64 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./home";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
 const HeroSection = () => {
-  const [menu, setMenu] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "../../public/assets/picFi/export.jpg",
+
+    "../../public/assets/picFi/cargo.jpg",
+    "../../public/assets/picFi/about.jpg",
+  ];
 
   useEffect(() => {
-    window.scroll(0, 0);
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change slide every 5 seconds (adjust as needed)
+
+    return () => clearInterval(intervalId);
   }, []);
 
-  
-  const closee = () => {s
-    setMenu(false);
-  };
-  const [showNestedList, setShowNestedList] = useState(false);
-
-  const handleServiceClick = () => {
-    setShowNestedList(!showNestedList);
+  const sliderStyles = {
+    height: "100vh", // Set hero section to 100vh
   };
 
-  const [isNestedVisible, setIsNestedVisible] = useState(false);
+  const overlayStyles = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    color: "#fff",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark opacity overlay
+  };
 
-  const toggleNestedVisibility = () => {
-    setIsNestedVisible(!isNestedVisible);
+  const textStyles = {
+    position: "absolute",
+    top: "60%", // Move the text down by adjusting the percentage
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    color: "#fff", // White text color
+    zIndex: 1, // Ensure text appears on top of overlay
+    textAlign: "center",
   };
 
   return (
-    <>
-     
-      {/* /.main-header */}
-      {/* main-slider-start */}
-      <section className="main-slider-one">
-        <div
-          className="main-slider-one__carousel grdeen-owl__carousel owl-carousel"
-          data-owl-options='{
-          "loop": true,
-          "animateOut": "fadeOut",
-          "animateIn": "fadeIn",
-          "items": 1,
-          "autoplay": true,
-          "autoplayTimeout": 5000,
-          "smartSpeed": 1000,
-          "nav": true,
-    "navText": ["<span class=\"icon-left-arrow11\"></span>","<span class=\"icon-right-arrow1\"></span>"],
-          "dots": false,
-          "margin": 0
-          }'
-        >
-          <div className="item">
-            <div className="main-slider-one__item">
-              <div className="main-slider-one__shape">
-                <img
-                  src="src/componet/assets/images/shapes/slider-shape1-2.png"
-                  alt="grdeen"
-                />
-              </div>
-              <div
-                className="main-slider-one__bg"
-                style={{
-                  backgroundImage: `url(${"src/componet/assets/picFi/cargo.jpg"})`,
-                }}
-              />
-              <div className="main-slider-one__overlay" />
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="main-slider-one__content">
-                      <h1 className="main-slider-one__sub-title">
-                        <img
-                          src="src/componet/assets/images/shapes/slider-shape1-2.png"
-                          alt="grdeen"
-                          className="hero-image"
-                        />{" "}
-                        <span style={{ fontSize: "20px" }}>
-                          {" "}
-                          WELCOME TO Kegeberew Export and Import{" "}
-                        </span>{" "}
-                        <br />
-                        <br /> <br />
-                        <br /> <br />
-                        <br /> <br />
-                        <br />
-                      </h1>
-                      {/* slider-sub-title */}
-                      <h2 className="main-slider-one__title">
-                        EMPOWERING GLOBAL TRADE, <br /> ENRICHING LIVES:
-                      </h2>
-                      {/* slider-title */}
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div style={{ marginBottom: "70px" }}>
+      <AwesomeSlider style={sliderStyles} selected={currentIndex}>
+        {images.map((image, index) => (
+          <div key={index} style={{ position: "relative" }}>
+            <img src={image} alt={`Slide ${index}`} />
+            <div style={overlayStyles}></div> {/* Dark opacity overlay */}
+            <div style={textStyles}>
+              <h3 style={{ color: "#fff" }}>Welcome To Kegeberew Export And Import</h3>
+              <h1 style={{ color: "#fff" }}>Empowering Global Trade, Enhancing Lives</h1>
             </div>
           </div>
-          <div className="item">
-            <div className="main-slider-one__item">
-              <div className="main-slider-one__shape">
-                <img
-                  src="src/componet/assets/images/shapes/slider-shape1-1.png"
-                  alt="grdeen"
-                />
-              </div>
-              <div
-                className="main-slider-one__bg"
-                style={{
-                  backgroundImage: `url(${"src/componet/assets/picFi/onee.jpg"})`,
-                }}
-              />
-              <div className="main-slider-one__overlay" />
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="main-slider-one__content">
-                      <h1 className="main-slider-one__sub-title">
-                        <img
-                          src="src/componet/assets/images/shapes/slider-shape1-2.png"
-                          alt="grdeen"
-                        />{" "}
-                        <span style={{ fontSize: "20px" }}>
-                          {" "}
-                          WELCOME TO Kegeberew Export and Import{" "}
-                        </span>{" "}
-                        <br /> <br /> <br />
-                        <br /> <br />
-                        <br /> <br />
-                        <br /> <br />
-                      </h1>
-                      {/* slider-sub-title */}
-                      <h2 className="main-slider-one__title">
-                        EMPOWERING GLOBAL TRADE, <br /> ENRICHING LIVES:
-                      </h2>
-                      {/* slider-title */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="main-slider-one__item">
-              <div className="main-slider-one__shape">
-                <img
-                  src="src/componet/assets/images/shapes/slider-shape1-1.png"
-                  alt="grdeen"
-                />
-              </div>
-              <div
-                className="main-slider-one__bg"
-                style={{
-                  backgroundImage: `url(${"src/componet/assets/picFi/twoo.jpg"})`,
-                }}
-              />
-              <div className="main-slider-one__overlay" />
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="main-slider-one__content">
-                      <h1 className="main-slider-one__sub-title">
-                        <img
-                          src="src/componet/assets/images/shapes/slider-shape1-2.png"
-                          alt="grdeen"
-                        />{" "}
-                        <span style={{ fontSize: "20px" }}>
-                          {" "}
-                          WELCOME TO Kegeberew Export and Import{" "}
-                        </span>{" "}
-                        <br /> <br />
-                        <br /> <br /> <br />
-                        <br /> <br />
-                        <br />
-                      </h1>
-                      {/* slider-sub-title */}
-                      <h2 className="main-slider-one__title">
-                        EMPOWERING GLOBAL TRADE, <br /> ENRICHING LIVES:
-                      </h2>
-                      {/* slider-title */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* main-slider-end */}
-      {/* Feature Start */}
-
-      {/* Feature End */}
-    </>
+        ))}
+      </AwesomeSlider>
+    </div>
   );
 };
 
