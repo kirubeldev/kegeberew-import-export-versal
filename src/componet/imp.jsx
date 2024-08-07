@@ -41,12 +41,12 @@ export default function CardWithImageExampleee() {
    < Headd/>
    
     <div className="grid-container cota2" style={{  padding:"130px 35px 0 0px" }}>
-    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"400px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
+    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"300px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
      <div className=''>
       <TERipple>
         <div className="image-container" style={{backgroundColor:"transparent"}}>
           <img
-          style={{height:"400px ", width:"450px", backgroundColor:"transparent"}}
+          style={{height:"300px ", width:"450px", backgroundColor:"transparent"}}
           
             className="rounded-t-lg"
             src={ma1}
@@ -66,12 +66,12 @@ export default function CardWithImageExampleee() {
     </div>
 
 
-    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"400px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
+    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"300px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
      <div className=''>
       <TERipple>
         <div className="image-container" style={{backgroundColor:"transparent"}}>
           <img
-          style={{height:"400px ", width:"450px", backgroundColor:"transparent"}}
+          style={{height:"300px ", width:"450px", backgroundColor:"transparent"}}
           
             className="rounded-t-lg"
             src={ma2}
@@ -92,12 +92,12 @@ export default function CardWithImageExampleee() {
 
 
 
-    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"400px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
+    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"300px",marginBottom:"90px", position:"relative" , overflow:"visible"}} >
      <div className=''>
       <TERipple>
         <div className="image-container" style={{backgroundColor:"transparent"}}>
           <img
-          style={{height:"400px ", width:"450px", backgroundColor:"transparent"}}
+          style={{height:"300px ", width:"450px", backgroundColor:"transparent"}}
           
             className="rounded-t-lg"
             src={ma3}
@@ -115,12 +115,12 @@ export default function CardWithImageExampleee() {
       <img className='newone' src={bgc} alt="" style={{position:"absolute"  ,bottom:-130 ,margin:"30px 0"}} />
       {/* <p style={{position:"absolute" , bottom:"-10px " ,zIndex:101, fontSize:"20px" , left:"43%"}}> Coffee</p> */}
     </div>
-    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"400px",marginBottom:"10px", position:"relative" , overflow:"visible"}} >
+    <div className="card cardd cofe" style={{maxWidth:"450px" , height:"300px",marginBottom:"10px", position:"relative" , overflow:"visible"}} >
      <div className=''>
       <TERipple>
         <div className="image-container" style={{backgroundColor:"transparent"}}>
           <img
-          style={{height:"400px ", width:"450px", backgroundColor:"transparent"}}
+          style={{height:"300px ", width:"450px", backgroundColor:"transparent"}}
           
             className="rounded-t-lg"
             src={ma4}
