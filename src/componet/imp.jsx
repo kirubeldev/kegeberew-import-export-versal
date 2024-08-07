@@ -3,7 +3,8 @@
 
 
 
-  import React from 'react';
+
+import React from 'react';
 import { TERipple } from 'tw-elements-react';
 
 
@@ -25,6 +26,29 @@ import ma4 from "./assets/picFi/ma4.jpg"
 
 export default function CardWithImageExampleee() {
   return (<div style={{marginTop:"20px"}}>
+     
+     <section className="page-header">
+    <div className="page-header__bg page-header__bgimport" />
+   
+    <div className="page-header__overlay" />
+    {/* /.page-header__bg */}
+    <center>  
+    <div className="container">
+      <h2 className="page-header__title"> Import  </h2>
+      <ul className="grdeen-breadcrumb list-unstyled">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <span>Import</span>
+        </li>
+      </ul>
+      
+      {/* /.thm-breadcrumb list-unstyled */}
+    </div>
+    </center>
+    {/* /.container */}
+  </section>
    < Headd/>
 
      {/* <img  src={bg} alt="" style={{ width: "100vw", height: "auto", objectFit: "cover" }} />  */}
@@ -135,3 +159,4 @@ export default function CardWithImageExampleee() {
 </div>
   );
 }
+
